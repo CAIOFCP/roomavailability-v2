@@ -1,16 +1,20 @@
 {
-	"name": "HelloWorldNodeApp",
-	"version": "0.0.1",
-    "private": true,
-	"scripts": {
-		"start": "node app.js"
-	},
-	"dependencies": {
-		"express": "4.13.x",
-		"cfenv": "1.0.x"
-	},
-	"repository": {},
-	"engines": {
-		"node": "4.2.x"
-	} 
+  "name": "HelloWorldNodeApp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "cfenv": "1.0.x",
+    "cloudant": "^1.8.0",
+    "express": "4.13.x",
+    "ibmiotf": "^0.2.39",
+    "socket-io": "^1.0.0"
+  },
+  "repository": {},
+  "engines": {
+    "node": "4.2.x"
+  }
 }
