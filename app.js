@@ -18,7 +18,7 @@ var app = express();
 var WIOT = require('./server/services/wiot')
 var client = new WIOT('9z8ou7','a-9z8ou7-1e1hw63t3m','?v*Vs!S?UzrGRZ6QS7')
 client.connect()
-const devices = client.getDevicesPerRoom('TU0601')
+const devices = client.getDevicesPerRoom({"deviceInfo.deviceClass": "TU0601"})
 console.log(devices)
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public'));

@@ -30,8 +30,12 @@ class WIOT {
         });
     }
 
-    getDevicesPerRoom(room){        
-       return this.appClient.getAllDevices({"deviceInfo.className":room})
+    getDevicesPerRoom(params){               
+       this.appClient.getAllDevices(params)
+       .then((result)=> {
+           console.log(result)
+           return result
+       })
     }
 }
 
