@@ -15,11 +15,13 @@ var cfenv = require('cfenv');
 // create a new express server
 var app = express();
 
-var WIOT = require('./server/services/wiot')
-var client = new WIOT('9z8ou7','a-9z8ou7-1e1hw63t3m','?v*Vs!S?UzrGRZ6QS7')
-client.connect()
-const devices = client.getDevicesPerRoom({"deviceInfo.deviceClass": "TU0601"})
-console.log(devices)
+// var WIOT = require('./server/services/wiot')
+// var client = new WIOT('9z8ou7','a-9z8ou7-1e1hw63t3m','?v*Vs!S?UzrGRZ6QS7')
+// client.connect()
+// const devices = client.getDevicesPerRoom({"deviceInfo.serialNumber":"TU0601"})
+var registry = require('./server/apis/newregistry');
+app.use('/registry', registry)
+
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public'));
 

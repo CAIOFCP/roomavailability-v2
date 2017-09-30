@@ -19,7 +19,7 @@ class WIOT {
     }
 
     connect(){
-        console.log('connect')
+       // console.log('connect')
        this.appClient.connect()
     }
 
@@ -33,9 +33,20 @@ class WIOT {
     getDevicesPerRoom(params){               
        this.appClient.getAllDevices(params)
        .then((result)=> {
-           console.log(result)
+           //console.log(result)
            return result
        })
+    }
+    
+    createDevice(device){
+        console.log('New Device',device)
+        return this.appClient && this.appClient.registerDevice(device.typeId, device.deviceId, device.password, device.deviceInfo).then(
+            (res) => {
+                // console.log(res)
+                return res
+                },
+            err => console.log(err)
+            )
     }
 }
 
