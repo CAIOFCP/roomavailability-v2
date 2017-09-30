@@ -1,0 +1,31 @@
+{
+    "clientId": "d:lkov9a:ROOM:TU0602",
+    "typeId": "ROOM",
+    "deviceId": "TU0602",
+    "deviceInfo": {
+        "serialNumber": "TU0601",
+        "manufacturer": "IBM",
+        "deviceClass": "OCUPATION"
+    },
+    "registration": {
+        "auth": {
+            "id": "a-lkov9a-6o6wgu856n",
+            "type": "app"
+        },
+        "date": "2017-09-30T13:55:22.737Z"
+    },
+    "status": {
+        "alert": {
+            "timestamp": "2017-09-30T13:55:22.737Z",
+            "enabled": false
+        }
+    },
+    "authToken": "12345678",
+    "refs": {
+        "diag": {
+            "logs": "/api/v0002/device/types/ROOM/devices/TU0602/diag/logs",
+            "errorCodes": "/api/v0002/device/types/ROOM/devices/TU0602/diag/errorCodes"
+        },
+        "location": "/api/v0002/device/types/ROOM/devices/TU0602/location"
+    }
+}
