@@ -4,7 +4,7 @@ const Client = require('ibmiotf')
 
 class Device {
   constructor(typeId, deviceId, opts) {
-    console.log("Device::Device(typeId=" + typeId + ", deviceId=" + deviceId + ", opts=" + JSON.stringify(opts) + ")");
+ //  console.log("Device::Device(typeId=" + typeId + ", deviceId=" + deviceId + ", opts=" + JSON.stringify(opts) + ")");
     this.typeId = typeId
     this.deviceId = deviceId
     this.connected = opts.connected || false

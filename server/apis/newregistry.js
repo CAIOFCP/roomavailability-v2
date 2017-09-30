@@ -3,7 +3,7 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
-var Cloudant = require('cloudant');
+var Database = require('../services/Database');
 
 
 //Sevices
@@ -45,7 +45,10 @@ router.get('/newdevice', (request, response) =>{
     }    
     var device = getDevice(typeId, deviceId, opts)
     client.createDevice(device.toObject()).then(
-        (res) => {           
+        (res) => { 
+            var db = new Database()      
+            db.persistDevice(res)
+            db.findNotAssignedDevices()
             response.send(res)
         },
         err => console.log(err)
