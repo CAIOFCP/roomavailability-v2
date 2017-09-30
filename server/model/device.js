@@ -1,3 +1,5 @@
+'use strict'
+
 const Client = require('ibmiotf')
 
 class Device {

@@ -1,4 +1,4 @@
-'use restric'
+'use strict'
 
 const Client = require('ibmiotf')
 

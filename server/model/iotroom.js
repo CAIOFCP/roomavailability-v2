@@ -1,4 +1,4 @@
-'use restrict'
+'use strict'
 var ibmiotf = require('ibmiotf')
 
 //That class represents the room in WIoTP
