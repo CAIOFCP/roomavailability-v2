@@ -11,6 +11,7 @@
     "cloudant": "^1.8.0",
     "express": "^4.13.4",
     "ibmiotf": "^0.2.39",
+    "request": "^2.83.0",
     "socket-io": "^1.0.0"
   },
   "repository": {},
