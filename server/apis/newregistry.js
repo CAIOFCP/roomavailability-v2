@@ -4,7 +4,7 @@ var express = require('express');
 var router = express.Router();
 var request = require('request');
 var Cloudant = require('cloudant');
-var cfenv = require('cfenv');
+
 
 //Sevices
 const WIOT = require('../services/wiot')
@@ -21,9 +21,6 @@ const getDevice = (typeId, deviceId, opts) => {
 const getClient = () => {
    return new WIOT(ORG_ID,API_KEY,API_TOKEN);
 }
-
-(function() {
-
 
 /******************************************************************
  *  This route is called from the phisycal device on it first start    
@@ -56,5 +53,3 @@ router.get('/newdevice', (request, response) =>{
 });
 
 module.exports = router;
-
-})();
