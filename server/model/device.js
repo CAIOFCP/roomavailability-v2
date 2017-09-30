@@ -6,29 +6,21 @@ class Device {
     this.typeId = typeId
     this.deviceId = deviceId
     this.connected = opts.connected || false
-    this.management = opts.management || "UNMANAGED"
     this.location = opts.location || null
-    this.errorCodes = opts.errorCodes || []
+    this.deviceInfo = opts.deviceInfo
     this.sentCount = 0
-    this.topic = ''    
-    this.sendUpdate()
+    this.topic = '' 
+    this.password = opts.password   
   }
 
   toObject() {
     return {
       typeId: this.typeId,
       deviceId: this.deviceId,
-      setId: this.setId,
-      publishRate: this.publishRate,
-      connected: this.connected,
+      connected: false,
       location: this.location,
-      management: this.management,
-      schema: this.schema,
-      errorCodes: this.errorCodes,
-      sentCount: this.sentCount,
-      pendingActions: this.pendingActions,      
-      reqId: this.reqId,
-      topic: this.topic
+      deviceInfo:this.deviceInfo,            
+      password: '12345678' 
     }
   }
 
@@ -75,9 +67,6 @@ class Device {
     
     setTimeout(() => this.sendMessage(key, Object.assign({}, this.toObject(), { lastPayload: this.lastPayload })), 200)
   }
-
-  subscribe()
-
 }
 
 module.exports = Device
