@@ -9,3 +9,5 @@ Apis:
 /global/status : return the status of all spaces
 
 /spaces/new : register new space
+
+/spaces/notassigned: returns spaces without devices
